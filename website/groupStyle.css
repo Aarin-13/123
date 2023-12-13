@@ -8,7 +8,7 @@ html {
 body {
     background:#dfe6e9;
     overflow-x: hidden;
-    height:260vh;
+    height:360vh;
 }
 #head {
     color:black;
@@ -197,6 +197,7 @@ strong {
   right:10%; 
 }
 .lastbtn {
+    font-weight:bold;
     font-size:2rem;
     background:red;
     position:absolute;
@@ -208,6 +209,47 @@ strong {
     transition: 0.5s;
     color:black;    
 }
+.dlast {
+    width:120%;
+    background:darkslateblue;
+    position:relative;
+    z-index:10000;
+    left:-10%;
+    top:110vh;
+    height:100vh;
+    z-index:-200;
+    padding:10rem;
+    padding-left:15rem;
+    color:white;
+}
+
+.dend {
+    margin-top:0.8rem;
+    font-size: 1.2rem;
+    transition:0.5s;
+    font-family: 'Trebuchet MS', sans-serif;
+    transition:0.5s;
+    letter-spacing: 0.5px;
+}
+.grid-container {
+    margin-top:5rem;
+    width:60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 13px;
+    height:20rem;
+}
+.grid-item {
+    background:white;
+    color:black;
+    text-align:center;
+    padding-top:40%;
+    font-weight:bold;
+    font-size:5rem;
+   
+
+}
+
 @keyframes l15 {
     90%,100%  {background-position: -27px 27px,-18px 36px,-9px 45px} 
 }
