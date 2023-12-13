@@ -66,7 +66,7 @@ void loop() {
   Serial.println();
 
   
-  delay(15);
+  delay(500);
   
   if (cm <= 16) {
         if (counter>prevCounter) {
@@ -99,7 +99,7 @@ void loop() {
   } else {
     counter+=0.5;
   }***/
-    delay(15);
+    delay(500);
 }// plan use prep grab and say if the degree is 0 change to 180 if degree is 180 change to 0 and then find a way to make the if command detect a chance in distance and FLIP
 // so when i move my hand in front of it and leave - it rotates only one time - just like walking through a door, the sensor detects a close reading then a far reading, but it should flick the lever only once
 
