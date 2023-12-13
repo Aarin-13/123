@@ -10,3 +10,14 @@ tl.to('.key', {
   autoAlpha:1,
   
 })
+
+const audio = new Audio("notec.mp3");
+const buttons = document.querySelectorAll(".C");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    audio.play();
+  });
+});
+
+//https://soundboardguy.com/sounds/c-note-mp3/
