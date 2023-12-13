@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	overflow:hidden;
+	background:#54a0ffff;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh
+}
+.backP {
+	position:absolute;
+	bottom:0px;
+	
+	display:block;
+	
+
+}
+
+
+.tri {
+	position:absolute;
+	left:50%;
+	top:20%;
+	border-left: 7rem solid #fff;
+	border-top: 3.5rem solid transparent;
+	border-bottom: 3.5rem solid transparent;
+	z-index:120;
+	transition:0.5s;
+}
+.tri2 {
+	position:absolute;
+	left:50%;
+	top:20%;
+	border-left: 8rem solid #2c3e50;
+	border-top: 4rem solid transparent;
+	border-bottom: 4rem solid transparent;
+	z-index:10;
+}
+.tri:hover {
+	top:18%;
+}
+.rain {
+	position:relative;
+	display: flex;
+	z-index:-100;
+	opacity:0;
+	transition:1s;
+}
+.rain span {
+	position: relative;
+	bottom:500px;
+	left:40px;
+	width:8px;
+	height:8px;
+	background:white;
+	margin: 0 1.2px;
+	border-radius:50%;
+	animation: animate 10s linear infinite;
+	animation-duration: calc(25s/var(--i));
+	transform-origin: bottom;
+}
+a {
+	width:7rem;
+	height:6rem;
+	background:orange;
+	position:absolute;
+	left:50%;
+	top:22%;
+	z-index:119;
+	opacity:0;
+}
+@keyframes animate {
+	0% {
+		transform: translateY(0) scaleX(.2) scaleY(1.5);
+	}
+	50% {
+		transform: translateY(300px) scaleX(.2) scaleY(4);
+	}
+	70% {
+		transform: translateY(1000px) scaleX(.2) scaleY(3);
+	}
+	100% {
+		transform: translateY(1000px) scale(0); 
+	}
+}

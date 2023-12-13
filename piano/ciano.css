@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	overflow-x:hidden;
+}
+.piano {
+	margin-top:-10px;
+	margin-left:-10px;
+	margin-right:-10px;
+	display:grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 35vh;
+}
+.key {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:2rem;
+	top:0px;
+	transition:0.5s;
+	height:100%;
+	font-family: Century Gothic;
+	font-weight:bold;
+	color: white;
+	opacity:0;
+
+}
+
+.middle {
+	display:grid;
+	grid-template-columns: repeat(7, 1fr);
+	justify-content:center;
+	margin-top:10vh;
+	grid-template-rows:20vh;
+	grid-gap:3rem;
+	margin-left:3rem;
+	margin-right:3rem;
+}
+.mid {
+	display:flex;
+
+	background:#00a8ff;
+	font-family: Century Gothic;
+	justify-content:center;
+	align-items:center;
+	font-size:2rem;
+	font-weight:bold;
+	border-radius:10px;
+	transition:0.5s;
+}
+
+.bottom {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center; 
+	align-items:stretch;
+	
+	
+
+	margin:0rem 1.6rem;
+
+	margin-top:10vh;
+
+	height:14rem;
+	////////////////////flex-wrap:wrap;
+	//grid-template-columns: repeat(10, 1fr);
+	
+	//grid-template-rows:13vh;
+	//grid-gap:1rem;
+	
+	//width: 90%;
+	//margin-left:5%;
+
+}
+.bot {
+	border-color:#2c3e50;
+	border-style:solid;
+	display:flex;
+	background:#2c3e50;
+	margin:.5rem .75rem;
+	align-items:center;
+	font-family: Century Gothic;
+	font-size:1rem;
+	font-weight:bold;
+	border-radius:12px;
+	transition:0.5s;
+	color:#f1c40f;
+	padding:1rem 2.5rem;
+}
+
+
+.C {
+	background-color:#2ecc71;
+}
+.Cs {
+	background-color:#27ae60;
+}
+.D {
+	background-color:#e67e22;
+}
+.Ds {
+	background-color:#d35400;
+}
+.E {
+	background-color:#3498db;
+}
+.F {
+	background-color:#2980b9;
+}
+.Fs {
+	background-color:#e74c3c;
+}
+.G {
+	background-color:#c0392b;
+}
+.Gs {
+	background-color:#34495e;
+}
+.A {
+	background-color:#2c3e50;
+}
+.As {
+	background-color:#95a5a6;
+}
+.B {
+	background-color:#7f8c8d;
+}
+.key:hover {
+	height:110%;
+	
+
+}
+.mid:hover {
+	background-color:#2c3e50;
+}
+
+.bot:hover {
+	background-color:white;
+
+}
+
+@media (max-width:950px) {
+	
+	.middle {
+		display:grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		justify-content:center;
+		margin-top:10vh;
+		grid-template-rows:6em 6em;
+		grid-gap:2rem;
+		margin-left:3rem;
+		margin-right:3rem;
+	}
+	
+}
+@media (max-width:1880px) {
+	
+	.bot {
+		transition: 0s;
+		margin:.5rem .25rem;
+	}
+	
+}
