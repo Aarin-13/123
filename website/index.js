@@ -21,6 +21,9 @@ function oliver() {
 function peter() {
     window.location.href = "peter.html";
 }
+function game() {
+    window.location.href = "game.html";
+}
 
 /*document.getElementById("bot").addEventListener("click", function() {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
