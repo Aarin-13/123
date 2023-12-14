@@ -23,6 +23,7 @@ body {
     bottom: 100px; /* Adjust the height based on building height */
     left: 45%;
     transform: translateX(-50%);
+    transition: 0.45s ease-out;
 }
 
 #character {
