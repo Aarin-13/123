@@ -8,7 +8,7 @@ html {
 body {
     background:#dfe6e9;
     overflow-x: hidden;
-    height:360vh;
+    height:160vh;
 }
 #head {
     color:black;
@@ -145,11 +145,10 @@ strong {
   border-top: 4rem solid #80B62C;
   position:relative;
   top:2rem;
+  cursor:none;
 }
-.triangle:hover {
-    cursor:none;
-}
-#last {
+
+.last {
     background: #2f3640;
     width:120%;
     
@@ -191,10 +190,11 @@ strong {
   background-size: 50% 50%;
   animation: l15 1s infinite;
   position:absolute;
-  z-index:100000;
+  z-index:100;
   cursor:none;
   bottom:4%;
   right:10%; 
+
 }
 .lastbtn {
     font-weight:bold;
@@ -209,14 +209,17 @@ strong {
     transition: 0.5s;
     color:black;    
 }
+.lastbtn:hover {
+    color:white;
+}
 .dlast {
     width:120%;
     background:darkslateblue;
     position:relative;
-    z-index:10000;
+    z-index:10;
     left:-10%;
     top:110vh;
-    height:100vh;
+    height:112vh;
     z-index:-200;
     padding:10rem;
     padding-left:15rem;
@@ -231,7 +234,7 @@ strong {
     transition:0.5s;
     letter-spacing: 0.5px;
 }
-.grid-container {
+.somethang {
     margin-top:5rem;
     width:60%;
     display: grid;
@@ -239,7 +242,7 @@ strong {
     column-gap: 13px;
     height:20rem;
 }
-.grid-item {
+.somethanginit {
     background:white;
     color:black;
     text-align:center;
@@ -247,7 +250,9 @@ strong {
     font-weight:bold;
     font-size:5rem;
    
-
+}
+.somethanginit:hover {
+    font-size:3rem;
 }
 
 @keyframes l15 {
