@@ -62,5 +62,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #FFFF00; /* Yellow */
+    background: radial-gradient(circle, #c4e605 1%, #c4e605 99%); /* Green */
+    border-radius: 50%; /* Make it round */
+    box-shadow: inset 0 0 1px #fff; /* Add some fuzziness */
 }
