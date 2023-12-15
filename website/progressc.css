@@ -7,59 +7,52 @@
   width: 100%;
  
   height: 10rem;
-  grid-template:
-    [header-left] "head head" 5rem [header-right]
-    [main-left] "nav  main" 1fr [main-right]
-    
-    / 120px 1fr;
+  
 
 }
-
+.link {
+  color:orange;
+  background-image: linear-gradient(lightblue, lightcyan, white);
+}
 header {
-  background-color: lime;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size:3rem;
   grid-area: head;
+  height:5rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-nav {
-  background-color: lightblue;
-  grid-area: nav;
-}
-
-main {
-  background-color: yellow;
-  grid-area: main;
-}
-
-footer {
-  background-color: red;
-  grid-area: foot;
-}
 #grid {
     display: grid;
-    grid-template-columns: 12rem;
+    grid-template-columns: 20rem;
     grid-auto-columns: auto;
-    height:200rem;
+    height:auto;
     
   }
   #A { grid-column: 1; grid-row: 1; }
-  #B { grid-column: 2; grid-row: 1; background:lightsteelblue;}
+  #B { grid-column: 2; grid-row: 1; }
   #C { grid-column: 1; grid-row: 2; }
-  #D { grid-column: 2; grid-row: 2; background:lightseagreen;}
+  #D { grid-column: 2; grid-row: 2; }
   #E { grid-column: 1; grid-row: 3; }
-  #F { grid-column: 2; grid-row: 3; background:lightsteelblue;}
+  #F { grid-column: 2; grid-row: 3; }
   #G { grid-column: 1; grid-row: 4; }
-  #H { grid-column: 2; grid-row: 4; background:lightseagreen;}
-  #I { grid-column: 1; grid-row: 5; }
-  #J { grid-column: 2; grid-row: 5; background:lightsteelblue;}
-  #K { grid-column: 1; grid-row: 6; }
-  #L { grid-column: 2; grid-row: 6; background:lightseagreen;}
-
+  #H { grid-column: 2; grid-row: 4; }
+ 
 .time {
   padding:.5rem;
+  padding-right:1.5rem;
+  text-align:center;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size:3rem;
+  text-transform:uppercase;
+  padding-bottom:10rem;
 }
 .box {
-  padding:.5rem;
-  border-left: 1px solid red;
-  border-top: 1px solid red;
+  font-size:1.5rem;
+  font-family: 'Trebuchet MS', sans-serif;
+  padding:1.5rem;
+  background-image: linear-gradient(lightblue, lightcyan, white);
   border-radius:15px 0px 0px 15px;
 }
