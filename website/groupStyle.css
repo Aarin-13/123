@@ -113,7 +113,7 @@ body {
 }
 
 .sec {
-    display:flex:
+    
     justify-content:center;
     text-align: center;
     position:relative;
@@ -147,36 +147,24 @@ strong {
   top:2rem;
   cursor:none;
 }
-
-.last {
-    background: #2f3640;
-    width:120%;
-    
-    position:absolute;
-    left:-10%;
-    bottom:-110vh;
-    height:100vh;
-    z-index:-200;
-    padding:5rem;
-    text-transform:uppercase;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size:2.5rem;
-    color:white;
-    letter-spacing:.2rem;
-    
+.yea {
+    position:relative;
+    top:5rem;
 }
-.end {
-    margin-top:4rem;
-    padding:2.8rem;
-    font-size:1.8rem;
-    border: outset white 10px;
+.nextpage {
+    position:absolute;
+    width:20%;
+    left:40%;
+    bottom:0rem;
+    color:red;
     text-align:center;
-    width:36%;
-    margin-left:32%;
-    word-wrap:break-word;
-    text-transform:none;
-    transition:0.5s;
-    
+    font-size:200%;
+    text-decoration:none;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-transform:uppercase;
+    font-weight:bold;
+    border-style:double;
+    border-radius:1rem;
 }
 
 .loader {
@@ -195,65 +183,6 @@ strong {
   bottom:4%;
   right:10%; 
 
-}
-.lastbtn {
-    font-weight:bold;
-    font-size:2rem;
-    background:red;
-    position:absolute;
-    bottom:2rem;
-    padding: 1rem;
-    border-radius:5px;
-    width:20%;
-    left:40%;
-    transition: 0.5s;
-    color:black;    
-}
-.lastbtn:hover {
-    color:white;
-}
-.dlast {
-    width:120%;
-    background:darkslateblue;
-    position:relative;
-    z-index:10;
-    left:-10%;
-    top:110vh;
-    height:112vh;
-    z-index:-200;
-    padding:10rem;
-    padding-left:15rem;
-    color:white;
-}
-
-.dend {
-    margin-top:0.8rem;
-    font-size: 1.2rem;
-    transition:0.5s;
-    font-family: 'Trebuchet MS', sans-serif;
-    transition:0.5s;
-    letter-spacing: 0.5px;
-}
-.somethang {
-    margin-top:5rem;
-    width:60%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 13px;
-    height:20rem;
-}
-.somethanginit {
-    background:white;
-    color:black;
-    text-align:center;
-    padding-top:40%;
-    font-weight:bold;
-    font-size:5rem;
-   
-}
-.somethanginit:hover {
-    font-size:3rem;
-}
 
 @keyframes l15 {
     90%,100%  {background-position: -27px 27px,-18px 36px,-9px 45px} 
