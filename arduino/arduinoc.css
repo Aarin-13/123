@@ -32,12 +32,13 @@ h1 {
 .goa {
     
     font-weight:bold;
+    font-size:1.1rem;
     padding:2rem;
 }
 .tinpic {
-    width:20rem;
-    height:10rem;
-    object-fit:cover;
+    width:28rem;
+    height:20rem;
+    object-fit:contain;
     border-radius:0.5rem;
 }
 .bgrid {
@@ -51,6 +52,21 @@ h1 {
     border-bottom:solid;
     border-top:solid;
 }
+.smol {
+    font-size:1.5rem;
+    margin-bottom:2rem;
+}
+.textbox {
+    background:lightblue;
+    border-radius:1rem;
+    padding:1.2rem;
+    margin-top:2rem;
+    text-align:left;
+    margin-left:4rem;
+    overflow:scroll;
+    height:20rem;
+}
+
 /*.griddy {
     display: grid;
     grid-template-columns: 12rem;

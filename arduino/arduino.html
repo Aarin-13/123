@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Arduino Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="arduinoc.css">  
   </head>
   <body>
-    <h1>Arduino Project - Team 3</h1>
+    <h1>Arduino Project - <a href="index.html">Team 3</a></h1>
     <div class="container text-center">
         <div class="row">
             <div class="col">
@@ -30,22 +30,78 @@
             - arduino uno 
             </div>
             <div class="col tin">
-            <img class="tinpic" src="banana.jpg" alt="computer diagram of project circuitry">
+            <img class="tinpic" src="tink.png" alt="computer diagram of project circuitry">
             </div>
             <div class="col goa">
-            Whenever I play piano, I want the light to turn on by itself. I have an ultrasonic sensor detect me walk past, which then calls the servo to activate, flicking on the lever of the light. When I leave, the ultrasonic sensor makes the servo turn off the lights.
+            Whenever I play piano, I want my toy Totoro to be facing me to keep my company. Whenever I leave, I want it turn away. I have an ultrasonic sensor detect me walk from the room to the piano seat, which causes the servo to rotate the Totoro 180 degrees by itself. When the ultrasonic sensor sees me walking away from the piano, the servo activates in the opposite direction, turning the Totoro away.
             </div>
         </div>
     </div>
     <div class="container text-center bgrid">
         <div class="row row-cols-2">
-            <div class="col left">Circuit</div>
+            <div class="col left">Beginning</div>
             <div class="col">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VFWF9rSAWF8?si=oCMWDGdZhxFPECn5" title="YouTube video player" frameborder="0"                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/d3rKDga9Y9Y?si=axEXgcSWfNzlRLDe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="col left">fjeiaosefs</div>
+            <div class="col left">Final</div>
             <div class="col">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VFWF9rSAWF8?si=oCMWDGdZhxFPECn5" title="YouTube video player" frameborder="0"                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wiCuy_D3PNw?si=H2dqYTRriK5GTS0D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="col left">Code </br><div class="smol">Ultrasonic sensor captures values rapidly. To detect a change in the state of something being within the range of 50 cm, four counters are used. Without these counters, having a servo rotate only within the range would cause it fidget uncontrollably.</div></div>
+            <div class="col">
+                <div class="textbox">
+                #include Servo.h </br>
+                Servo myservo; </br>
+                int pos = 0; </br>
+                int prevPos = 0; </br>
+                int counter = 0; </br>
+                int prevCounter = 0; </br>
+                const int pingPin = 7; </br>
+
+                void setup() { </br>
+                  myservo.attach(9); // attaches the pins of the servos to the servo object </br>
+                  Serial.begin(9600); // object to transmit the ultrasonic values back to computer </br>
+                } </br>
+
+                void loop() { </br>
+                  long duration, cm; </br>
+                  pinMode(pingPin, OUTPUT); </br>
+                  digitalWrite(pingPin, LOW); </br>
+                  delayMicroseconds(2); </br>
+                  digitalWrite(pingPin, HIGH); </br>
+                  delayMicroseconds(5); </br>
+                  digitalWrite(pingPin, LOW); </br>
+                  pinMode(pingPin, INPUT); </br>
+                  duration = pulseIn(pingPin, HIGH); </br>
+                  cm = microsecondsToCentimeters(duration); </br>
+                  Serial.print(cm); </br>
+                  Serial.print("cm"); </br>
+                  Serial.println(); </br>
+                  
+                  delay(75); </br>
+                  if (cm <= 50) { </br>
+                        if (counter>prevCounter) { </br>
+                            if (prevPos==0) { </br>
+                                myservo.write(180); </br>
+                                prevPos = 180; </br>
+                            } else if (prevPos==180) { </br>
+                                myservo.write(0); </br>
+                                prevPos = 0; </br>
+                            } </br>
+                            prevCounter=counter; </br>
+                        } </br>
+                    } else if (cm > 50) { </br>
+                        counter++; </br>
+                    }         </br>
+                    delay(75); </br>
+                }</br>
+                long microsecondsToCentimeters(long microseconds) </br>
+                  // The speed of sound is 340 m/s or 29 microseconds per centimeter</br>
+                  // The ping travels out and back, so to find the distance of the object </br>
+                  // take half of the distance travelled</br>
+                  return microseconds / 29 / 2 
+                
+                </div>
             </div>
         </div>
     </div>
