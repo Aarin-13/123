@@ -13,7 +13,9 @@ body {
 .building {
     position: absolute;
     bottom: 0;
-    width: 100px;
+    left: 50%; /* Center the building */
+    transform: translateX(-50%); /* Adjust for the building's own width */
+    width: 80vw; /* Set the width to the viewport width */
     height: 100px;
     background-color: #8B4513; /* SaddleBrown */
 }
