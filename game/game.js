@@ -168,7 +168,7 @@ startTimer();
 // Call createBall once to start the ball creation
 
 
-setInterval(createBall,5000); // Create a new ball every 2 seconds
+setInterval(createBall,4000); // Create a new ball every 2 seconds
 
 // Call createBall once to start the ball creation
 //createBall();

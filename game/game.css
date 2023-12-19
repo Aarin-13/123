@@ -1,6 +1,8 @@
 body {
     margin: 0;
     overflow: hidden;
+    background-color: #87CEEB; /* Sky Blue */
+    color: #000; /* Black */
 }
 
 #game-container {
@@ -59,8 +61,24 @@ body {
 }
 
 .ball {
-    position: absolute;
+    position: absolute;   
     width: 20px;
     height: 20px;
     background-color: #FFFF00; /* Yellow */
+    border-radius: 50%; /* Make it round */
+    box-shadow: 0 0 10px #FFFF00, /* Outer glow */
+                0 0 5px #FFFF00;  /* Inner glow */
+}
+
+.title {
+    font-family: 'Courier New', monospace; /* Change the font family */
+    font-size: 2.5em; /* Increase the font size */
+    color: #ffffff; /* Change the color to black */
+    text-shadow: 2px 2px #000; /* Add a shadow to the text */
+    background-color: #87CEEB; /* Sky Blue */
+    text-align: center; /* Center the text */
+}
+
+#game-over-message, #timer, .title {
+    background-color: #87CEEB; /* Sky Blue */
 }
